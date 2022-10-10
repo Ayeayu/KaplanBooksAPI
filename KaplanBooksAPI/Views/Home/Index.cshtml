@@ -1,0 +1,44 @@
+﻿@model IEnumerable<KaplanBooksAPI.Models.KaplanBooks>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div id= "title" class=" text-centre mt-5"> All Books </div>
+    <div class = "row">
+        <div id="input" class="input-group mx-auto  col-lg-10 col-md-10 col-sm-12">
+        <input id="search-box" type="text" class="form-control" placeholder="Search" />
+            <button id="search" class="btn btn-group-lg" onclick=""></button>
+        </div>
+    </div>
+</div>
+
+<div>
+
+</div>
+
+
+<div class="row">
+    @if(Model.Count() > 0)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="card m-1" style="width:350px;">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Publisher)</h6>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.PublishedDate)</p>
+                    <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" width="150" height="200" alt="Release picture" />
+                    <a href="@Html.DisplayFor(modelItem => item.Link)" target="_blank">Buy</a>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No data available</p>
+    }
+</div>
