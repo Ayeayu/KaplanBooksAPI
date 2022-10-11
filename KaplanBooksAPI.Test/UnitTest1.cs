@@ -33,33 +33,6 @@ namespace KaplanBooksAPI.Test
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-            //private readonly HttpClient httpClient; 
-
-            //public  UnitTest1()
-            //{
-            //    var appFactory = new WebApplicationFactory<Startup>();
-            //    httpClient = appFactory.CreateClient();
-
-            //}
-
-            //[Fact]
-            //public async Task Test1()
-            //{
-            //    var response = await httpClient.GetAsync("https://www.googleapis.com/books/v1/volumes?q=kaplan%20test%20prep");
-            //}
-
         }
     }
 }

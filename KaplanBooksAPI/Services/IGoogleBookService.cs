@@ -8,7 +8,5 @@ namespace KaplanBooksAPI.Services
     {
         Task<IEnumerable<KaplanBooks>> GetKaplanBooks();
 
-
-
     }
 }

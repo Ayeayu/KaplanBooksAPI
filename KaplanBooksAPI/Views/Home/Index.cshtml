@@ -6,26 +6,24 @@
 }
 
 <div class="container">
-    <div id= "title" class=" text-centre mt-5"> All Books </div>
+    <div id= "title" class=" text-centre mt-xxl-5 " style="font-size:3vw"> All Books </div>
     <div class = "row">
-        <div id="input" class="input-group mx-auto  col-lg-10 col-md-10 col-sm-12">
+        <div id="input" class="input-group mx-auto  col-lg-10 col-md-10 col-sm-12" input-size="10" >
         <input id="search-box" type="text" class="form-control" placeholder="Search" />
-            <button id="search" class="btn btn-group-lg" onclick=""></button>
+            <button id="search" class="btn btn-group-lg" onclick="Search"></button>
         </div>
     </div>
 </div>
 
-<div>
+<div>&nbsp;</div> 
 
-</div>
-
-
+<div class="container">
 <div class="row">
     @if(Model.Count() > 0)
     {
         @foreach (var item in Model)
         {
-            <div class="card m-1" style="width:350px;">
+            <div class="card m-md-1" style="width:300px;">
                 <div class="card-body">
                     <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
                     <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Author)</h6>
@@ -41,4 +39,5 @@
     {
         <p>No data available</p>
     }
+</div>
 </div>

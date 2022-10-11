@@ -13,7 +13,6 @@ namespace KaplanBooksAPI.Services
     public class GoogleBookService : IGoogleBookService
     {
         private  readonly HttpClient _httpClient;
-        //public readonly string _url = "/books/v1/volumes?q=kaplan%20test%20prep";
 
         public GoogleBookService(HttpClient httpClient)
         {
@@ -26,11 +25,10 @@ namespace KaplanBooksAPI.Services
         {
             //var yourAPIKey = "AIzaSyBwidUQB-D56TS_76nLTLDzOxZOxCm1s5c";
             //var url = "https://www.googleapis.com/books/v1/volumes?q=kaplan%20test%20prep";
+            //var response = await _httpClient.GetAsync($"volumes?author={author}&title={title}:&key={yourAPIKey}");
+
 
             var response = await _httpClient.GetAsync(_httpClient.BaseAddress);
-
-
-            //var response = await _httpClient.GetAsync($"volumes?author={author}&title={title}:&key={yourAPIKey}");
 
             response.EnsureSuccessStatusCode();
             List<List<KaplanBooks>> kaplanBooks = new List<List<KaplanBooks>>();
